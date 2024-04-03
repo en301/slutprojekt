@@ -1,0 +1,47 @@
+body{
+    background-color: whitesmoke;
+    height: 99vh;
+    margin: 0px;
+    padding: 0;
+}
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80px auto 60px;
+}
+
+nav{
+    text-decoration: none;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+nav > ul > li >img {
+height: 10vh;}
+
+nav > ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;
+}
+
+nav li{
+    list-style-type: none;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+h1{ 
+    text-align: center;
+}   
+
+footer{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+footer p{
+    text-align: center;
+}
