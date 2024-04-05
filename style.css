@@ -1,7 +1,7 @@
 body{
     background-color: whitesmoke;
-    height: 99vh;
-    margin: 0px;
+    height: 100%;
+    margin: 0;
     padding: 0;
     grid-template-areas:
     "header"
@@ -13,7 +13,7 @@ body{
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 160px auto 60px;
+    grid-template-rows: 430px auto 60px;
 }
 
 nav{
@@ -23,33 +23,29 @@ nav{
     border-radius: 10px;
 }
 
-nav li:hover{
-    transition: 0.5s;
-    background-image: linear-gradient(rgba(23, 170, 23,0.4), rgba(11, 71, 11, 0.4));
+nav li:hover {
+    background-image: linear-gradient(rgba(23, 170, 23,0.4), rgba(21, 107, 21, 0.4));
     border-radius: 10px;
 }
 
 nav > ul > li > a > img {
-    height: 10vh;}
-
-nav > ul{   
-    display: grid;
-    grid-template-columns: 1fr repeat(4, 2fr);
-    padding: 0;
+    height: 70px;
 }
 
-nav li:first-of-type{   
+nav > ul{   
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     padding: 0;
+    line-height: 2;
 }
 
 nav li{
+    display: grid;
+    justify-content: stretch;
     font-size: 25px;
     list-style-type: none;
     text-align: center;
-    transition: 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav a{
@@ -69,15 +65,47 @@ main{
 }
 
 main > img{
+    width: 80vw;
     border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 footer{
     grid-area: "footer";
-    background-image: linear-gradient(rgb(23, 170, 23), rgb(21, 51, 21));
+    background-image: linear-gradient(rgb(23, 170, 23), rgb(14, 77, 14));
     border-radius: 10px;
 }
 
 footer p{
     text-align: center;
+}
+
+@media (min-width: 800px){
+    body{
+        height: 97vh;
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-rows: 160px auto 60px;
+    }
+
+    nav > ul{
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 2fr);
+        line-height: 3;
+        gap: 50px;
+    }
+
+    nav li a:first-of-type{   
+        height: 80px;
+    }
+
+    nav li{
+        height: 80px;
+    }
+
+    main > img{
+        width: 80vh;
+    }
 }
