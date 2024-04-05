@@ -3,43 +3,79 @@ body{
     height: 99vh;
     margin: 0px;
     padding: 0;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
 }
 .wrapper{
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 80px auto 60px;
+    grid-template-rows: 160px auto 60px;
 }
 
 nav{
+    grid-area: "nav";
     text-decoration: none;
-    background-color: blueviolet;
+    background-image: linear-gradient(rgb(144, 235, 144), rgb(23, 170, 23));
     border-radius: 10px;
 }
 
-nav > ul > li >img {
-height: 10vh;}
+nav li:hover{
+    transition: 0.5s;
+    background-image: linear-gradient(rgba(23, 170, 23,0.4), rgba(11, 71, 11, 0.4));
+    border-radius: 10px;
+}
 
-nav > ul{
+nav > ul > li > a > img {
+    height: 10vh;}
+
+nav > ul{   
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr repeat(4, 2fr);
+    padding: 0;
+}
+
+nav li:first-of-type{   
     padding: 0;
 }
 
 nav li{
+    font-size: 25px;
     list-style-type: none;
     text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 h1{ 
     text-align: center;
-}   
+}
+
+main{
+    grid-area: "main";
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+main > img{
+    border-radius: 15px;
+}
 
 footer{
-    border: 1px solid black;
-    border-radius: 5px;
+    grid-area: "footer";
+    background-image: linear-gradient(rgb(23, 170, 23), rgb(21, 51, 21));
+    border-radius: 10px;
 }
 
 footer p{
