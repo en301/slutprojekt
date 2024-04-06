@@ -28,6 +28,11 @@ nav li:hover {
     border-radius: 10px;
 }
 
+.active{
+    background-image: linear-gradient(rgba(23, 170, 23,0.4), rgba(21, 107, 21, 0.4));
+    border-radius: 10px;
+}
+
 nav > ul > li > a > img {
     height: 70px;
 }
@@ -53,7 +58,11 @@ nav a{
     color: rgb(0, 0, 0);
 }
 
-h1{ 
+h1{
+    text-align: center;
+}
+
+.centerh1{
     text-align: center;
 }
 
@@ -95,6 +104,12 @@ footer p{
         grid-template-columns: 1fr repeat(4, 2fr);
         line-height: 3;
         gap: 50px;
+    }
+
+    
+    h1{ 
+        text-align: left;
+        padding-left: 15px;
     }
 
     nav li a:first-of-type{   
