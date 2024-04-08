@@ -19,7 +19,7 @@ body{
 nav{
     grid-area: "nav";
     text-decoration: none;
-    background-image: linear-gradient(rgb(144, 235, 144), rgb(23, 170, 23));
+    background-image: linear-gradient(rgb(86, 224, 86), rgb(23, 170, 23));
     border-radius: 10px;
 }
 
