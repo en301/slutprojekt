@@ -3,21 +3,30 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
 }
 .wrapper{
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 430px auto 60px;
+    grid-template-rows: auto auto 60px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.wrapperwithlocal{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto 60px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 
 nav{
-    grid-area: "nav";
     text-decoration: none;
     background-image: linear-gradient(rgb(86, 224, 86), rgb(23, 170, 23));
     border-radius: 10px;
@@ -37,12 +46,22 @@ nav > ul > li > a > img {
     height: 70px;
 }
 
-nav > ul{   
+nav:first-of-type > ul{   
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     padding: 0;
     line-height: 2;
+    margin: 0;
+}
+
+nav > ul{   
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    padding: 0;
+    line-height: 2;
+    margin: 0;
 }
 
 nav li{
@@ -66,8 +85,12 @@ h1{
     text-align: center;
 }
 
+header{
+    grid-area: header;
+}
+
 main{
-    grid-area: "main";
+    grid-area: main;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -80,13 +103,19 @@ main > img{
 }
 
 footer{
-    grid-area: "footer";
+    grid-area: footer;
     background-image: linear-gradient(rgb(23, 170, 23), rgb(14, 77, 14));
     border-radius: 10px;
 }
 
 footer p{
     text-align: center;
+}
+
+@media (max-width: 876px){
+    nav ul li a{
+        font-size: 87%;
+    }
 }
 
 @media (min-width: 800px){
@@ -99,13 +128,26 @@ footer p{
         grid-template-rows: 160px auto 60px;
     }
 
-    nav > ul{
+    nav:first-child > ul{
         display: grid;
         grid-template-columns: 1fr repeat(4, 2fr);
         line-height: 3;
         gap: 50px;
     }
 
+     nav > ul{
+        grid-area: localnav;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        line-height: 3;
+        gap: 50px;
+    }
+
+    header{
+        display: grid;
+        grid-template-rows: 80px 80px;
+    }
+    
     
     h1{ 
         text-align: left;
