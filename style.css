@@ -27,18 +27,25 @@ body{
 }
 
 nav{
+    background-color: rgb(23, 170, 23);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav:first-of-type{
     text-decoration: none;
     background-image: linear-gradient(rgb(86, 224, 86), rgb(23, 170, 23));
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 nav li:hover {
-    background-image: linear-gradient(rgba(23, 170, 23,0.4), rgba(21, 107, 21, 0.4));
+    background-image: linear-gradient(rgba(23, 122, 23, 0.4), rgba(20, 75, 20, 0.4));
     border-radius: 10px;
 }
 
 .active{
-    background-image: linear-gradient(rgba(23, 170, 23,0.4), rgba(21, 107, 21, 0.4));
+    background-image: linear-gradient(rgba(23, 122, 23, 0.4), rgba(20, 75, 20, 0.4));
     border-radius: 10px;
 }
 
@@ -46,7 +53,7 @@ nav > ul > li > a > img {
     height: 70px;
 }
 
-nav:first-of-type > ul{   
+nav:first-of-type > ul{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -54,7 +61,6 @@ nav:first-of-type > ul{
     line-height: 2;
     margin: 0;
 }
-
 nav > ul{   
     display: flex;
     flex-direction: row;
@@ -128,7 +134,7 @@ footer p{
         grid-template-rows: 160px auto 60px;
     }
 
-    nav:first-child > ul{
+    nav:first-of-type > ul{
         display: grid;
         grid-template-columns: 1fr repeat(4, 2fr);
         line-height: 3;
