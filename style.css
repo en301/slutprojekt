@@ -105,6 +105,10 @@ main{
     padding-top: 0;
 }
 
+h2{
+    text-align: center;
+}
+
 main p{
     line-height: 1.7;
     font-size: 1.3rem;
@@ -165,6 +169,11 @@ td:nth-child(3), th:nth-child(3){
 
 caption{
     font-size: 150%;
+}
+
+dt, dd{
+    font-size: 1.3rem;
+    line-height: 1.7;
 }
 
 footer{
@@ -260,6 +269,10 @@ footer p{
 
     .sectionimg1{
         height: 34vw;
+    }
+
+    .sectionimg2{
+        height: 23vw;
     }
 
     .sectionvideo1{
