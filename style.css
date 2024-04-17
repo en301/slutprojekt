@@ -128,6 +128,12 @@ section{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
+section + div{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 25px;
+}
+
 section > img{
     width: 100%;
     border-radius: 15px;
@@ -258,6 +264,7 @@ footer p{
     #spalt2 main{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         grid-gap: 20px;
     }
 
@@ -267,15 +274,7 @@ footer p{
         grid-gap: 20px;
     }
 
-    .sectionimg1{
-        height: 34vw;
-    }
-
-    .sectionimg2{
-        height: 23vw;
-    }
-
-    .sectionvideo1{
-        height: 26vw;
+    section{
+        height: auto;
     }
 }
