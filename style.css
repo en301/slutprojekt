@@ -151,7 +151,7 @@ table{
 td, th, table{
     border: 1px solid rgb(0, 0, 0);
     border-collapse: collapse;
-    font-size: 130%;
+    font-size: 113%;
 }
 
 tr:nth-child(even){
@@ -273,8 +273,8 @@ footer p{
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
     }
-
-    section{
-        height: auto;
+    
+    td, th, table{
+        font-size: 130%;
     }
 }
