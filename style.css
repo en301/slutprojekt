@@ -134,9 +134,14 @@ section + div{
     gap: 25px;
 }
 
-section > img{
+section img{
     width: 100%;
     border-radius: 15px;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 110%;
 }
 
 video{
@@ -180,6 +185,17 @@ caption{
 dt, dd{
     font-size: 1.3rem;
     line-height: 1.7;
+}
+
+fieldset{
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+legend{
+    font-size: 130%;
+    text-align: center;
 }
 
 footer{
