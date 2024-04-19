@@ -31,13 +31,22 @@
             <form action="thanks.html" method="post">
                 <fieldset>
                     <legend>Quiz om golf</legend>
-                    <p>Hur många golfklubbor får en spelare maximalt ha med sig i sin bag under en rond?</p>
-                    <label for="12klubbor">12</label><input name="12klubbor" id="12klubbor" type="radio" value="12">
-                    <label for="14klubbor">14</label><input name="14klubbor" id="14klubbor" type="radio" value="14">
-                    <label for="16klubbor">16</label><input name="16klubbor" id="16klubbor" type="radio" value="16">
-                    <label for="18klubbor">18</label><input name="18klubbor" id="18klubbor" type="radio" value="18">
+                    <fieldset>
+                        <legend>Hur många golfklubbor får en spelare maximalt ha med sig i sin bag under en rond?</legend>
+                        <label for="12klubbor">12</label><input type="radio" value="12" name="fråga1" id="12klubbor">
+                        <label for="14klubbor">14</label><input type="radio" value="14" name="fråga1" id="14klubbor">
+                        <label for="16klubbor">16</label><input type="radio" value="16" name="fråga1" id="16klubbor">
+                        <label for="18klubbor">18</label><input type="radio" value="18" name="fråga1" id="18klubbor">
+                    </fieldset>
                     <br> <br>
-                    <p>Vilken klubba är avsedd för att användas på green?</p>
+                    <fieldset>
+                        <legend>Vilken klubba är avsedd för att användas på green?</legend>
+                        <label for="driver">Driver</label><input type="radio" value="driver" name="fråga2" id="driver">
+                        <label for="putter">Putter</label><input type="radio" value="putter" name="fråga2" id="putter">
+                        <label for="wedge">Wedge</label><input type="radio" value="wedge" name="fråga2" id="wedge">
+                        <label for="hybrid">Hybrid</label><input type="radio" value="hybrid" name="fråga2" id="hybrid">
+                    </fieldset>
+                    
                 </fieldset>
                 <fieldset>
                     <legend>Registrering</legend>

@@ -193,6 +193,15 @@ fieldset{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
+fieldset > fieldset{
+    border: none;
+    box-shadow: none;
+}
+
+fieldset > fieldset > legend{
+    text-align: left;
+}
+
 legend{
     font-size: 130%;
     text-align: center;
