@@ -285,6 +285,10 @@ footer p{
     main{
         overflow-y: scroll;
     }
+    
+    section{
+        height: min-content;
+    }
 
     #spalt2 main{
         display: grid;
