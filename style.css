@@ -122,13 +122,20 @@ main > img{
 }
 
 section{
-    background-color: rgb(219, 219, 219);
+    background-color: hsl(0, 0%,86%);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-section + div{
+article{
+    background-color: #dbdbdb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+section + div, article + div{
     display: grid;
     grid-template-rows: auto auto;
     gap: 25px;
@@ -183,11 +190,22 @@ caption{
 }
 
 dt, dd{
-    font-size: 1.3rem;
+    font-size: 2.6ch;
     line-height: 1.7;
+    margin: 0;
+}
+
+ol{
+    margin: 0;
+    padding-left: 25px;
+}
+
+ol > li{
+    font-size: 3ex;
 }
 
 fieldset{
+    margin: 0;
     background-color: rgb(219, 219, 219);
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
@@ -196,6 +214,14 @@ fieldset{
 fieldset > fieldset{
     border: none;
     box-shadow: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.spalt5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
 }
 
 fieldset > fieldset > legend{
@@ -212,7 +238,12 @@ label{
 }
 
 fieldset > fieldset > label{
-    font-size: 100%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+input{
+    margin: 0;
 }
 
 input:required:invalid{
@@ -227,10 +258,33 @@ footer{
     grid-area: footer;
     background-image: linear-gradient(rgb(23, 170, 23), rgb(14, 77, 14));
     border-radius: 10px;
+    margin: 0;
 }
 
 footer p{
     text-align: center;
+    margin: 0;
+    padding-top: 13px;
+}
+
+a:link{
+    color:inherit
+}
+
+a:visited{
+    color:inherit
+}
+
+a:focus{
+    color:inherit
+}
+
+a:hover{
+    color:inherit
+}
+
+a:active{
+    color:inherit
 }
 
 @media (max-width: 876px){
@@ -242,6 +296,7 @@ footer p{
 @media (min-width: 800px){
     body{
         height: 99vh;
+        margin: 0;
     }
 
     .wrapper{
@@ -303,6 +358,10 @@ footer p{
     }
     
     section{
+        height: min-content;
+    }
+
+    article{
         height: min-content;
     }
 
