@@ -70,7 +70,7 @@
                     <label for="valspelare">Vilken av dessa spelare kom tvåa i Masters 2024?</label>
                     <br>
                     <select id="valspelare" name="valspelare">
-                        <option value="woods">Tiger Woods</option>
+                        <option value="woods" selected>Tiger Woods</option>
                         <option value="åberg">Ludvig Åberg</option>
                         <option value="fleetwood">Toomy Fleetwood</option>
                         <option value="tosti">Alejandro Tosti</option>
@@ -79,6 +79,14 @@
                     <label for="recention">Vad tyckte du om quizen?</label>
                     <br>
                     <textarea id="recention" name="recention"></textarea>
+                    <fieldset>
+                        <legend>Vad tyckte du om denna quiz?</legend>
+                        <label for="rating5">5</label><input type="radio" value="5" name="rating" id="rating5" checked>
+                        <label for="rating4">4</label><input type="radio" value="4" name="rating" id="rating4">
+                        <label for="rating3">3</label><input type="radio" value="3" name="rating" id="rating3">
+                        <label for="rating2">2</label><input type="radio" value="2" name="rating" id="rating2">
+                        <label for="rating1">1</label><input type="radio" value="1" name="rating" id="rating1">
+                    </fieldset>
                 </fieldset>
                 <fieldset>
                     <legend>Registrering</legend>
@@ -92,9 +100,9 @@
                     <br> <br>
                     <label for="number">Skriv in ditt telefonnummer</label>
                     <br>
-                    <input type="tel" name="number" id="number" placeholder="123-4567890" required>
+                    <input type="tel" name="number" id="number" pattern="[0-9]{3}-[0-9]{7}" placeholder="123-4567890" required>
                     <br> <br>
-                    <input type="submit" value="Svara">
+                    <button>Svara</button>
                 </fieldset>
             </form>
         </main>

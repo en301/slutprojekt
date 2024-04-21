@@ -207,6 +207,22 @@ legend{
     text-align: center;
 }
 
+label{
+    font-size: 130%;
+}
+
+fieldset > fieldset > label{
+    font-size: 100%;
+}
+
+input:required:invalid{
+    border: 2px solid red;
+}
+
+input:required:valid{
+    border: 2px solid rgb(10, 236, 10);
+}
+
 footer{
     grid-area: footer;
     background-image: linear-gradient(rgb(23, 170, 23), rgb(14, 77, 14));
