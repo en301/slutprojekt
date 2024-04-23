@@ -141,7 +141,7 @@ section + div, article + div{
     gap: 25px;
 }
 
-section img{
+section img, article img{
     width: 100%;
     border-radius: 15px;
 }
@@ -242,8 +242,9 @@ fieldset > fieldset > label{
     text-align: center;
 }
 
-input{
+input, textarea{
     margin: 0;
+    border-radius: 5px;
 }
 
 input:required:invalid{
@@ -252,6 +253,12 @@ input:required:invalid{
 
 input:required:valid{
     border: 2px solid rgb(10, 236, 10);
+}
+
+button{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 footer{
