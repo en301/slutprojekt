@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "swansea";
+    src: url(Swansea-q3pd.ttf);
+}
+
+p, a, h1, h2, label, legend, th, td, caption, figcaption, dt, dd, li{
+    font-family: "swansea", 'Times New Roman', serif;
+}
+
 body{
     background-color: whitesmoke;
     height: 100%;
@@ -258,7 +267,17 @@ input:required:valid{
 button{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
+    width: 140px;
+    height: 40px;
+    background-color: rgb(23, 170, 23);
     cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(28, 136, 28);
+    color: rgb(255, 255, 255);
+    transform: scale(1.08);
+    transition: ease 0.5s;
 }
 
 footer{
@@ -341,7 +360,6 @@ a:active{
         display: grid;
         grid-template-rows: 80px 80px;
     }
-    
     
     h1{ 
         text-align: left;
