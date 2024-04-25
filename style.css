@@ -95,6 +95,7 @@ nav a{
 
 h1{
     text-align: center;
+    margin: 0;
 }
 
 .centerh1{
@@ -115,7 +116,9 @@ main{
 }
 
 h2{
-    text-align: center;
+    text-align: end;
+    margin: 0;
+    width: 60%;
 }
 
 main p{
@@ -128,6 +131,11 @@ main > img{
     width: 80vw;
     border-radius: 15px;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#tacksida img{
+    width: 60px;
+    padding-left: 45%;
 }
 
 section{
@@ -163,6 +171,13 @@ figcaption{
 video{
     width: 100%;
     border-radius: 15px;
+}
+
+iframe{
+    width: 100%;
+    border-radius: 15px;
+    width: 100%; 
+    border: none;
 }
 
 table{
@@ -341,7 +356,6 @@ a:active{
         "footer";
     }
     
-
     nav:first-of-type > ul{
         display: grid;
         grid-template-columns: 1fr repeat(4, 2fr);
@@ -356,6 +370,11 @@ a:active{
         gap: 50px;
     }
 
+     #tacksida nav > ul{
+        display: grid;
+        grid-template-columns: 1fr;
+     }
+
     header{
         display: grid;
         grid-template-rows: 80px 80px;
@@ -364,6 +383,11 @@ a:active{
     h1{ 
         text-align: left;
         padding-left: 15px;
+    }
+
+    #tacksida h1{
+        text-align: center;
+        grid-row-start: 2;
     }
 
     nav li a:first-of-type{   
@@ -386,6 +410,22 @@ a:active{
         height: min-content;
     }
 
+    #tacksida section:first-of-type{
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    #tacksida section:nth-child(2){
+        grid-column-start: 2;
+        grid-row-start: 3;
+    
+    }
+
+    #tacksida section:last-of-type{
+        grid-column-start: 2;
+        grid-row-start: 4;
+    }
+
     article{
         height: min-content;
     }
@@ -402,7 +442,15 @@ a:active{
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
     }
-    
+
+    #tacksida main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;  
+        padding: 0;
+    }
+
     td, th, table{
         font-size: 130%;
     }
