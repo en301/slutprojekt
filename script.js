@@ -56,7 +56,8 @@ function init (){
             correctAnswers++;
         }
 
-        localStorage.setItem(correctAnswers)
-        console.log("Form got submitted ", correctAnswers);
+        localStorage.setItem("score", correctAnswers)
+        document.body.innerHTML = "<h2>Du fick: <br> "+ localStorage.getItem("score") +"/9 rätt</h2>";
     })
 }
+

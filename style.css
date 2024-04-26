@@ -116,9 +116,10 @@ main{
 }
 
 h2{
-    text-align: end;
+    text-align: center;
     margin: 0;
     width: 60%;
+    padding-left: 6vw;
 }
 
 main p{
@@ -135,7 +136,7 @@ main > img{
 
 svg{
     width: 60px;
-    padding-left: 45%;
+    padding-left: 13vw;
 }
 
 section{
