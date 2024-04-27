@@ -118,8 +118,7 @@ main{
 h2{
     text-align: center;
     margin: 0;
-    width: 60%;
-    padding-left: 6vw;
+    width: 100%;
 }
 
 main p{
@@ -135,8 +134,10 @@ main > img{
 }
 
 svg{
+    display: flex;
     width: 60px;
-    padding-left: 13vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section{
@@ -416,15 +417,9 @@ a:active{
         grid-row-start: 2;
     }
 
-    #tacksida section:nth-child(2){
-        grid-column-start: 2;
-        grid-row-start: 3;
-    
-    }
-
     #tacksida section:last-of-type{
         grid-column-start: 2;
-        grid-row-start: 4;
+        grid-row-start: 3;
     }
 
     article{

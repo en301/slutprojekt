@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/golfball-icon.ico">
         <link href = "style.css" rel = "stylesheet">
-        <script src="script.js"></script>
+        <script src="quiz.js" defer></script>
         <title>Quiz</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html"><img src ="img/pngtree-golf-ball-on-white-tee-vector-realistic-illustration-isolated-png-image_1903799-removebg-preview.png" alt ="golfboll"></a></li>
+                    <li><a href="index.html"><img src ="img/golfball-pic.png" alt ="golfboll"></a></li>
                     <li class="active"><a href="rules.html">Allmäna regler</a></li>
                     <li><a href="pro-world.html">Proffs världen</a></li>
                     <li><a href="equipment.html">Utrustning</a></li>
@@ -84,7 +85,7 @@
                     <br>
                     <input type="text" id="fråga5" name="fråga5">
                     <br> <br>
-                    <label for="valspelare">Vilken av dessa spelare kom tvåa i Masters 2024?</label>
+                    <label for="fråga6">Vilken av dessa spelare kom tvåa i Masters 2024?</label>
                     <br>
                     <select id="fråga6" name="fråga6">
                         <option value="woods">Tiger Woods</option>
@@ -114,15 +115,15 @@
                     <legend>Registrering</legend>
                     <label for="password">Skriv in ditt golf-id</label>
                     <br>
-                    <input type="password" name="password" id="password" >
+                    <input type="password" name="password" id="password" required>
                     <br> <br>
                     <label for="email">Skriv in din email</label>
                     <br>
-                    <input type="email" name="email" id="email" placeholder="joesmith@mail.com" >
+                    <input type="email" name="email" id="email" placeholder="joesmith@mail.com" required>
                     <br> <br>
                     <label for="number">Skriv in ditt telefonnummer</label>
                     <br>
-                    <input type="tel" name="number" id="number" pattern="[0-9]{3}-[0-9]{7}" placeholder="123-4567890" >
+                    <input type="tel" name="number" id="number" pattern="[0-9]{3}-[0-9]{7}" placeholder="123-4567890" required>
                     <br> <br>
                     <button type="submit">Svara</button>
                 </fieldset>
