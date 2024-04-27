@@ -56,9 +56,11 @@ function init (){
             correctAnswers++;
         }
 
-        localStorage.setItem("score", correctAnswers);
+        sessionStorageStorage.setItem("score", correctAnswers);
 
-        document.body.innerHTML = "<h2>Du fick: "+ localStorage.getItem("score") +"/9 rätt</h2>";
+        const newtext = document.getElementById("newtext");
+        newtext.textContent = "Du fick: "+ sessionStorageStorage.getItem("score") +"/9 rätt";
+        console.log(newtext);
     })
 }
 
