@@ -1,19 +1,30 @@
-@font-face {
-    font-family: "swansea";
-    src: url(Swansea-q3pd.ttf);
+@font-face { /*Gör att man kan importera fonter*/
+    font-family: "swansea"; /*Ger ett namn till fonten*/
+    src: url(Swansea-q3pd.ttf); /*Länkar fonten*/
 }
 
-p, a, h1, h2, label, legend, th, td, caption, figcaption, dt, dd, li{
-    font-family: "swansea", 'Times New Roman', serif;
+p, a, h1, h2, label, legend, th, td, caption, figcaption, dt, dd, li{ /*Här väljer jag allt jag vill att mina fonter ska finnas på. En gruppselektor*/
+    font-family: "swansea", 'Times New Roman', serif; /*Gör att den första fonten är min egna och sedan två gineriska som alla har*/
 }
 
-body{
-    background-color: whitesmoke;
+body{ /*En typselektor som förändrar body*/
+    background-color: whitesmoke; /*Lägger till bakgrundsfärg*/
+    height: 100%; /*Bestämmer höjd på sidan för en telefon*/
+    margin: 0; /*Gör att sidan går till kanterna*/
+    padding: 0; /*Gör att sidan går till kanterna*/
+}
+.wrapper{ /*En klassselektor för min div som täcker hela sidan*/
     height: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100%; /*Gör att sidan täcker hela bredden av mobilen*/
+    display: grid; /*Skapar en grid*/
+    grid-template-rows: auto auto 60px; /*Gör att menyer och main tar så mycket plats som det måste medan footer alltid tar upp 60px*/
+    grid-template-areas: /*Skapar namn på delar i sidan*/
+    "header"
+    "main"
+    "footer";
 }
-.wrapper{
+
+.wrapperwithlocal{ /*Gör att det ser likadant ut på mobilen. Denna klass används till dator när jag vill ha en lokal meny*/
     height: 100%;
     width: 100%;
     display: grid;
@@ -24,94 +35,83 @@ body{
     "footer";
 }
 
-.wrapperwithlocal{
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto auto 60px;
-    grid-template-areas:
-    "header"
-    "main"
-    "footer";
+
+nav:first-of-type{ /*Gör att den första naven på sidorna förändras. Psuedoklassen gör att det är den första*/
+    text-decoration: none; /*Tar bort punkten framför listelementen*/
+    background-image: linear-gradient(rgb(86, 224, 86), rgb(23, 170, 23)); /*Lägger till en bakgrundsfärg som skiftar lite nedåt*/
+    border-top-left-radius: 10px; /*Gör att menyn får rundad kant uppe till vänster*/
+    border-top-right-radius: 10px; /*Gör att menyn får rundad kant uppe till höger*/
 }
 
-
-nav:first-of-type{
-    text-decoration: none;
-    background-image: linear-gradient(rgb(86, 224, 86), rgb(23, 170, 23));
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+nav:last-of-type{ /*Beskriver den sista menyn på varje sida*/
+    background-color: rgb(23, 170, 23); /*Gör att den endast är en färg*/
+    border-bottom-left-radius: 10px; /*Runder nere till vänster hörn*/
+    border-bottom-right-radius: 10px; /*Rundar nere till höger hörn*/
 }
 
-nav:last-of-type{
-    background-color: rgb(23, 170, 23);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+nav li:hover { /*Gör att när man håller på något i listan kommer något att hända*/
+    background-image: linear-gradient(rgba(23, 122, 23, 0.4), rgba(20, 75, 20, 0.4)); /*Förändrar bakgrundsfärgen när man håller på den*/
+    border-radius: 10px; /*Ger den rundade hörn*/
 }
 
-nav li:hover {
+.active{ /*Denna klass gör att det syns hela tiden så man vet vart på sidan man är*/
     background-image: linear-gradient(rgba(23, 122, 23, 0.4), rgba(20, 75, 20, 0.4));
     border-radius: 10px;
 }
 
-.active{
-    background-image: linear-gradient(rgba(23, 122, 23, 0.4), rgba(20, 75, 20, 0.4));
-    border-radius: 10px;
-}
-
-nav > ul > li > a > img {
-    height: 70px;
+nav > ul > li > a > img { /*Bestämmer bilden i menyns storlek. En barnselektor*/
+    height: 70px; /*Bestämmer höjden*/
 }
 
 nav:first-of-type > ul{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    display: flex; /*Gör att sakerna i byter plats till där de passar bäst*/
+    flex-direction: column; /*Gör att de går neråt som en hamburgemeny*/
+    row-gap: 10px; /*Skapar ett mellanrum mellan sakerna i*/
     padding: 0;
-    line-height: 2;
+    line-height: 2; /*Bestämmer höjden på knapparna*/
     margin: 0;
 }
 nav > ul{   
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    display: grid; /*Gör att den lokala menyn blir en grid*/
+    grid-template-columns: 1fr 1fr 1fr; /*Gör att det blir en trespalts meny*/
+    gap: 10px; /*Skapar mellanrum mellan dem*/
     padding: 0;
-    line-height: 4;
+    line-height: 4; /*Bestämmer höjd*/
     margin: 0;
 }
 
-nav li{
+nav li{ /*En avkomlingsselektor*/
     display: grid;
-    justify-content: stretch;
-    font-size: 25px;
-    list-style-type: none;
-    text-align: center;
+    justify-content: stretch; /*Gör att de täcker hela bredden*/
+    font-size: 25px; /*Bestämmer textens storlek*/
+    list-style-type: none; /*Tar bort onödiga list dekorationer*/
+    text-align: center; /*centrerar texten*/
 }
 
 nav a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); /*Gör att texten blir svart*/
 }
 
 h1{
-    text-align: center;
+    text-align: center; /*Gör att alla rubriker på mobil blir centrerade*/
     margin: 0;
 }
 
 .centerh1{
-    text-align: center;
+    text-align: center; /*Gör att rubriker med denna klass blir centrerade även på dator*/
 }
 
 header{
-    grid-area: header;
+    grid-area: header; /*Ger delen sitt namn*/
 }
 
 main{
     grid-area: main;
     display: grid;
-    justify-content: center;
+    justify-content: center; /*Gör att typen hamnar i mitten*/
     row-gap: 25px;
-    padding: 20px;
+    padding: 20px; /*Gör att det blir lite mellanrum mellan kanterna och texten i main*/
     padding-top: 0;
 }
 
@@ -122,41 +122,41 @@ h2{
 }
 
 main p{
-    line-height: 1.7;
-    font-size: 1.3rem;
+    line-height: 1.7; /*Gör att avståndet mellan texten blir lite större*/
+    font-size: 1.3rem; /*Bestämmer textens storlek*/
     margin: 0;
 }
 
 main > img{
-    width: 80vw;
-    border-radius: 15px;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 80vw; /*Gör att bilderna följer med storlekten på skärmen för vw är ett mått på skärmens bredd*/
+    border-radius: 15px; /*Gör att bilden får rundade hörn*/
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; /*Gör bilden en mindre skugga*/
 }
 
 svg{
-    display: flex;
+    display: flex; /*Gör att bilden kan centreras*/
     width: 60px;
-    margin-left: auto;
+    margin-left: auto; /*Här använder jag margin auto för att centrera bilden*/
     margin-right: auto;
 }
 
 section{
-    background-color: hsl(0, 0%,86%);
+    background-color: hsl(0, 0%,86%); /*bakgrunds färg med hsl*/
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /*En tydligare skugga på mina sections*/
 }
 
 article{
-    background-color: #dbdbdb;
+    background-color: #dbdbdb; /*bakgrundsfärg med hexadecimal*/
     border-radius: 10px;
     padding: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-section + div, article + div{
+section + div, article + div{ /*En angränsande syskonselektor som används för att sectionerna och acticlarna ska vara nära varandra*/
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto; /*Skapar rader som sectionerna kan ligga i*/
     gap: 25px;
 }
 
@@ -179,7 +179,7 @@ iframe{
     width: 100%;
     border-radius: 15px;
     width: 100%; 
-    border: none;
+    border: none; /*Tar bort bordern runt min iframe*/
 }
 
 table{
@@ -187,27 +187,27 @@ table{
 }
 
 td, th, table{
-    border: 1px solid rgb(0, 0, 0);
-    border-collapse: collapse;
+    border: 1px solid rgb(0, 0, 0); /*Skapar en border runt dessa typer*/
+    border-collapse: collapse; /*Gör att om två borders angränsar går de ihop till en border*/
     font-size: 113%;
 }
 
-tr:nth-child(even){
+tr:nth-child(even){ /*Skapar zebrastriping på min tabell med hjälp av nth-child som väljer varannnan*/
     background-color: rgb(255, 255, 255);
 }
 
-th:nth-child(1), td:nth-child(1){
-    text-align: left;
+th:nth-child(1), td:nth-child(1){ /*Väljer den första av varje th och td*/
+    text-align: left; /*Gör att texten går åt vänster*/
     width: 10vw;
 }
 
-td:nth-child(2), th:nth-child(2){
+td:nth-child(2), th:nth-child(2){ /*Väljer den andra av th och td*/
     text-align: center;
 }
 
 
-td:nth-child(3), th:nth-child(3){
-    text-align: right;
+td:nth-child(3), th:nth-child(3){ /*Väljer den tredje av td och td*/
+    text-align: right; /*Gör att texten går åt höger*/
     width: 10vw;
 }
 
@@ -223,7 +223,7 @@ dt, dd{
 
 ol{
     margin: 0;
-    padding-left: 25px;
+    padding-left: 25px; /*Skapar avstånd till kanten av sectionen den ligger i*/
 }
 
 ol > li{
@@ -237,7 +237,7 @@ fieldset{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-fieldset > fieldset{
+fieldset > fieldset{ /*Gör att fieldsets i fieldsets inte har någon dekoration men en grid så att valen lägger sig rätt*/
     border: none;
     box-shadow: none;
     display: grid;
@@ -245,16 +245,16 @@ fieldset > fieldset{
     grid-gap: 5px;
 }
 
-.spalt5{
+.spalt5{ /*Gör att denna med 5 val får en grid med 5 spalter istället för 4*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
 }
 
-fieldset > fieldset > legend{
+fieldset > fieldset > legend{ /*Gör att frågorna lägger sig till vänster*/
     text-align: left;
 }
 
-legend{
+legend{ /*Gör att rubrikerna lägger sig i mitten*/
     font-size: 130%;
     text-align: center;
 }
@@ -263,7 +263,7 @@ label{
     font-size: 130%;
 }
 
-fieldset > fieldset > label{
+fieldset > fieldset > label{ /*Gör att svaren som är labels förändras*/
     font-size: 1.2em;
     text-align: center;
 }
@@ -273,28 +273,28 @@ input, textarea{
     border-radius: 5px;
 }
 
-input:required:invalid{
+input:required:invalid{ /*Skapar en röd border runt required där kraven inte har uppfyllts*/
     border: 2px solid red;
 }
 
-input:required:valid{
+input:required:valid{ /*Skapar en grön border runt required där krvaen har uppfyllts*/
     border: 2px solid rgb(10, 236, 10);
 }
 
-button{
+button{ /*Designar min button*/
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     width: 140px;
     height: 40px;
     background-color: rgb(23, 170, 23);
-    cursor: pointer;
+    cursor: pointer; /*Gör att muspekaren blir stilen pointer när den håller på knappen*/
 }
 
 button:hover{
     background-color: rgb(28, 136, 28);
     color: rgb(255, 255, 255);
-    transform: scale(1.08);
-    transition: ease 0.5s;
+    transform: scale(1.08); /*Gör att knappen blir större när man håller över den*/
+    transition: ease 0.5s; /*Gör att den långsamt blir större*/
 }
 
 footer{
@@ -309,6 +309,8 @@ footer p{
     margin: 0;
     padding-top: 13px;
 }
+
+/*LoVE Focus HAte*/
 
 a:link{
     color:inherit
@@ -330,28 +332,28 @@ a:active{
     color:inherit
 }
 
-@media (max-width: 876px){
+@media (max-width: 876px){ /*Skapar en media querie som gör texten lite mindre för att den ska få plats i sina knappar*/
     nav ul li a{
         font-size: 87%;
     }
 }
 
-@media (min-width: 800px){
+@media (min-width: 800px){ /*Gör en media querie för datorn så att jag kan designa enbart för datorn*/
     body{
-        height: 99vh;
+        height: 99vh; /*Gör att footern kommer längst ner*/
         margin: 0;
     }
 
     .wrapper{
         display: grid;
-        grid-template-rows: 160px auto 60px;
+        grid-template-rows: 160px auto 60px; /*Gör att header tar 160px*/
     }
 
     .wrapperwithlocal{
         height: 100%;
         width: 100%;
         display: grid;
-        grid-template-rows: 240px auto 60px;
+        grid-template-rows: 240px auto 60px; /*Gör att header tar 240px så man får plats med båder global meny, lokal meny och en rubrik*/
         grid-template-areas:
         "header"
         "main"
@@ -360,9 +362,9 @@ a:active{
     
     nav:first-of-type > ul{
         display: grid;
-        grid-template-columns: 1fr repeat(4, 2fr);
-        line-height: 3;
-        gap: 50px;
+        grid-template-columns: 1fr repeat(4, 2fr); /*Gör att den första tar 1fr medan de andra fyra tar 2fr*/
+        line-height: 3; /*Gör knapparna högre*/
+        gap: 50px; /*Skapar ett avstånd mellan knapparna*/
     }
 
      nav > ul{
@@ -372,27 +374,27 @@ a:active{
         gap: 50px;
     }
 
-     #tacksida nav > ul{
+     #tacksida nav > ul{ /*Gör att tillbaka knappen på tacksidan täcker hela*/
         display: grid;
         grid-template-columns: 1fr;
      }
 
     header{
         display: grid;
-        grid-template-rows: 80px 80px;
+        grid-template-rows: 80px 80px; /*Gör att menyn täcker hälften och rubriken täcker hälften*/
     }
     
     h1{ 
-        text-align: left;
+        text-align: left;  /*Lägger rubriken till vänster*/
         padding-left: 15px;
     }
 
-    #tacksida h1{
+    #tacksida h1{ /*Denna gör att h1 i min tacksida blir centrerad och går ned lite*/
         text-align: center;
-        grid-row-start: 2;
+        grid-row-start: 2; /*Denna tar ned den en rad*/
     }
 
-    nav li a:first-of-type{   
+    nav li a:first-of-type{    /*Gör höjden lite större på den första länken*/
         height: 80px;
     }
 
@@ -405,46 +407,45 @@ a:active{
     }
 
     main{
-        overflow-y: scroll;
-    }
-    
-    section{
-        height: min-content;
-    }
-
-    #tacksida section:first-of-type{
-        grid-column-start: 2;
-        grid-row-start: 2;
-    }
-
-    #tacksida section:last-of-type{
-        grid-column-start: 2;
-        grid-row-start: 3;
-    }
-
-    article{
-        height: min-content;
+        overflow-y: scroll; /*Gör att man skrollar på main så att footer och menyer syns hela tiden*/
     }
 
     #spalt2 main{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr; /*Skapar 2 kolumner till mina 2spalts sidor*/
         grid-gap: 20px;
     }
 
     #spalt3 main{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr; /*Skapar kolumner som jag kan lägga saker i*/
         grid-gap: 20px;
     }
 
     #tacksida main{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr; /*Gör en stor grid så att jag kan lägga saker där jag vill*/
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-gap: 30px;  
         padding: 0;
+    }
+    
+    section{
+        height: min-content; /*Gör att sectionerna bara tar den höjd de behöver*/
+    }
+
+    #tacksida section:first-of-type{
+        grid-column-start: 2; /*Lägger den första sectionen på min tacksida på rätt plats*/
+        grid-row-start: 2;
+    }
+
+    #tacksida section:last-of-type{
+        grid-column-start: 2; /*Lägger min andra section på min tacksida på rätt plats*/
+        grid-row-start: 3;
+    }
+
+    article{
+        height: min-content;
     }
 
     td, th, table{

@@ -1,9 +1,8 @@
 window.onload = init;
 
 function init() {
-    console.log("Loaded DOM - thanks");
 
-    const score = sessionStorage.getItem("score");
-    const scoreTitle = document.getElementById("newtext");
-    scoreTitle.textContent = `Du fick ${score}/9 rätt`;
+    const score = sessionStorage.getItem("score"); //Gör dina poäng till en variabel
+    const scoreTitle = document.getElementById("newText"); //Gör min gamla text till en variabel
+    scoreTitle.textContent = `Du fick ${score}/9 rätt`; //Gör att den gamla texten byts ut till den nya med score
 }
