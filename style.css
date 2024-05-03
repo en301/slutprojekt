@@ -340,7 +340,7 @@ a:active{
 
 @media (min-width: 800px){ /*Gör en media querie för datorn så att jag kan designa enbart för datorn*/
     body{
-        height: 99vh; /*Gör att footern kommer längst ner*/
+        height: 100vh; /*Gör att footern kommer längst ner*/
         margin: 0;
     }
 
