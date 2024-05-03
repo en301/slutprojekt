@@ -313,7 +313,7 @@ footer p{
 /*LoVE Focus HAte*/
 
 a:link{
-    color:inherit
+    color:inherit /*Gör att färgen är den samma som tidigare*/
 }
 
 a:visited{
