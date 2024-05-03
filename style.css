@@ -297,6 +297,11 @@ button:hover{
     transition: ease 0.5s; /*Gör att den långsamt blir större*/
 }
 
+path{
+    fill:#030104;
+    
+}
+
 footer{
     grid-area: footer;
     background-image: linear-gradient(rgb(23, 170, 23), rgb(14, 77, 14));
