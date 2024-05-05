@@ -10,128 +10,128 @@
     </head>
     <body>
         <div class = "wrapperwithlocal">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html"><img src ="img/golfball-pic.png" alt ="golfboll"></a></li>
-                    <li class="active"><a href="rules.html">Allmäna regler</a></li>
-                    <li><a href="pro-world.html">Proffs världen</a></li>
-                    <li><a href="equipment.html">Utrustning</a></li>
-                    <li><a href="history.html">Historia</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li><a href="rules.html">Regler</a></li>
-                    <li><a href="course.html">Banan</a></li>
-                    <li  class="active"><a href="quiz.html">Quiz</a></li>
-                </ul>
-            </nav>
-            <h1>Quiz</h1>
-        </header>
-        <main>
-            <form action="thanks.html" method="post"> <!--Skapar ett formulär som i detta fall är en quiz. action skickar dig efter du har svarat och method post gör att datan inte syns av andra-->
-                <fieldset> <!--skapar en section fast i en form-->
-                    <legend>Quiz om golf</legend> <!--En rubrik fast i en fieldset-->
-                    <fieldset> <!--Denna fieldset gör att frågan håller ihop med sina svar-->
-                        <legend>Hur många golfklubbor får en spelare maximalt ha med sig i sin bag under en rond?</legend> <!--Här använder jag legend som fråga-->
-                        <label for="12klubbor">12 </label> <!--Skapar svaren till frågan och for för att hålla ihop svar med texten-->
-                        <label for="14klubbor">14 </label>
-                        <label for="16klubbor">16 </label>
-                        <label for="18klubbor">18 </label>
-                        <input type="radio" value="12" name="fråga1" id="12klubbor"> <!--Detta är en rund knapp som du kan välja. value ger valet ett värde och name gör att de olika svaren håller ihop. id gör att input håller ihop med sin label-->
-                        <input type="radio" value="14" name="fråga1" id="14klubbor">
-                        <input type="radio" value="16" name="fråga1" id="16klubbor">
-                        <input type="radio" value="18" name="fråga1" id="18klubbor">
-                    </fieldset> 
-                    <br> <!--Bryter så att nästa text hamnar en rad under-->
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><img src ="img/golfball-pic.png" alt ="golfboll"></a></li>
+                        <li class="active"><a href="rules.html">Allmäna regler</a></li>
+                        <li><a href="pro-world.html">Proffs världen</a></li>
+                        <li><a href="equipment.html">Utrustning</a></li>
+                        <li><a href="history.html">Historia</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        <li><a href="rules.html">Regler</a></li>
+                        <li><a href="course.html">Banan</a></li>
+                        <li  class="active"><a href="quiz.html">Quiz</a></li>
+                    </ul>
+                </nav>
+                <h1>Quiz</h1>
+            </header>
+            <main>
+                <form action="thanks.html" method="post"> <!--Skapar ett formulär som i detta fall är en quiz. action skickar dig efter du har svarat och method post gör att datan inte syns av andra-->
+                    <fieldset> <!--skapar en section fast i en form-->
+                        <legend>Quiz om golf</legend> <!--En rubrik fast i en fieldset-->
+                        <fieldset> <!--Denna fieldset gör att frågan håller ihop med sina svar-->
+                            <legend>Hur många golfklubbor får en spelare maximalt ha med sig i sin bag under en rond?</legend> <!--Här använder jag legend som fråga-->
+                            <label for="12klubbor">12 </label> <!--Skapar svaren till frågan och for för att hålla ihop svar med texten-->
+                            <label for="14klubbor">14 </label>
+                            <label for="16klubbor">16 </label>
+                            <label for="18klubbor">18 </label>
+                            <input type="radio" value="12" name="fråga1" id="12klubbor"> <!--Detta är en rund knapp som du kan välja. value ger valet ett värde och name gör att de olika svaren håller ihop. id gör att input håller ihop med sin label-->
+                            <input type="radio" value="14" name="fråga1" id="14klubbor">
+                            <input type="radio" value="16" name="fråga1" id="16klubbor">
+                            <input type="radio" value="18" name="fråga1" id="18klubbor">
+                        </fieldset> 
+                        <br> <!--Bryter så att nästa text hamnar en rad under-->
+                        <fieldset>
+                            <legend>Vilken klubba är avsedd för att användas på green?</legend>
+                            <label for="driver">Driver</label>
+                            <label for="putter">Putter</label>
+                            <label for="wedge">Wedge</label>
+                            <label for="hybrid">Hybrid</label>
+                            <input type="radio" value="driver" name="fråga2" id="driver">
+                            <input type="radio" value="putter" name="fråga2" id="putter">
+                            <input type="radio" value="wedge" name="fråga2" id="wedge">
+                            <input type="radio" value="hybrid" name="fråga2" id="hybrid">
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <legend>Vilka platser är delar av en golfbana?</legend>
+                            <label for="green">Green</label>
+                            <label for="teknikums-parkering">Teknikums parkering</label>
+                            <label for="bunker">Bunker</label>
+                            <label for="ica-norrhult">Ica i Norrhult</label>
+                            <input type="checkbox" value="green" name="fråga3" id="green"> <!--Här används checkbox istället för att man ska kunna välja många svar-->
+                            <input type="checkbox" value="teknikums-parkering" name="fråga3" id="teknikums-parkering">
+                            <input type="checkbox" value="bunker" name="fråga3" id="bunker">
+                            <input type="checkbox" value="ica-norrhult" name="fråga3" id="ica-norrhult">
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                            <legend>Vilka av dessa termer är golfslag?</legend>
+                            <label for="blåmes">Blåmes</label>
+                            <label for="eagle">Eagle</label>
+                            <label for="albatros">Albatros</label>
+                            <label for="boogey">Boogey</label>
+                            <input type="checkbox" value="blåmes" name="fråga4" id="blåmes">
+                            <input type="checkbox" value="eagle" name="fråga4" id="eagle">
+                            <input type="checkbox" value="albatros" name="fråga4" id="albatros">
+                            <input type="checkbox" value="boogey" name="fråga4" id="boogey">
+                        </fieldset>
+                        <br>
+                        <label for="fråga5">Vilken klubba slår man (oftast) längst med?</label>
+                        <br>
+                        <input type="text" id="fråga5" name="fråga5"> <!--type text skapar en mindre ruta där man själv kan svara-->
+                        <br> <br>
+                        <label for="fråga6">Vilken av dessa spelare kom tvåa i Masters 2024?</label>
+                        <br>
+                        <select id="fråga6" name="fråga6"> <!--Skapar en rullgardinsmeny där man kan välja svar-->
+                            <option value="woods">Tiger Woods</option> <!--Skapar valen i din rullgardins meny-->
+                            <option value="åberg" selected>Ludvig Åberg</option>
+                            <option value="fleetwood">Toomy Fleetwood</option>
+                            <option value="tosti">Alejandro Tosti</option>
+                        </select>
+                        <br> <br>
+                        <label for="recention">Vad tyckte du om quizen?</label>
+                        <br>
+                        <textarea id="recention" name="recention"></textarea> <!--Skapar en stor yta som man själv kan göra större om man vill skriva mer-->
+                        <fieldset class="spalt5">
+                            <legend>Vad tyckte du om denna quiz?</legend>
+                            <label for="rating5">5</label>
+                            <label for="rating4">4</label>
+                            <label for="rating3">3</label>
+                            <label for="rating2">2</label>
+                            <label for="rating1">1</label>
+                            <input type="radio" value="5" name="rating" id="rating5" checked> <!--Checked gör att detta var är itryckt redan när sidan laddar-->
+                            <input type="radio" value="4" name="rating" id="rating4">
+                            <input type="radio" value="3" name="rating" id="rating3">
+                            <input type="radio" value="2" name="rating" id="rating2">
+                            <input type="radio" value="1" name="rating" id="rating1">
+                        </fieldset>
+                    </fieldset>
                     <fieldset>
-                        <legend>Vilken klubba är avsedd för att användas på green?</legend>
-                        <label for="driver">Driver</label>
-                        <label for="putter">Putter</label>
-                        <label for="wedge">Wedge</label>
-                        <label for="hybrid">Hybrid</label>
-                        <input type="radio" value="driver" name="fråga2" id="driver">
-                        <input type="radio" value="putter" name="fråga2" id="putter">
-                        <input type="radio" value="wedge" name="fråga2" id="wedge">
-                        <input type="radio" value="hybrid" name="fråga2" id="hybrid">
+                        <legend>Registrering</legend>
+                        <label for="password">Skriv in ditt golf-id</label>
+                        <br>
+                        <input type="password" name="password" id="password" required>  <!--Password gör att man inte kan se texten. Required gör att man måste svara på den för att lämna in-->
+                        <br> <br>
+                        <label for="email">Skriv in din email</label>
+                        <br>
+                        <input type="email" name="email" id="email" placeholder="joesmith@mail.com" required>  <!--email gör att man måste använda @ och något innan och efter det. placeholder gör att man kan se ett exempel på vad man kan skriva-->
+                        <br> <br>
+                        <label for="number">Skriv in ditt telefonnummer</label>
+                        <br>
+                        <input type="tel" name="number" id="number" pattern="[0-9]{3}-[0-9]{7}" placeholder="123-4567890" required> <!--pattern gör att man måste följa mönstret för att lämna in-->
+                        <br> <br>
+                        <button type="submit">Svara</button>  <!--Skapar en knapp som man kan klicka på för att lämna in-->
                     </fieldset>
-                    <br>
-                    <fieldset>
-                        <legend>Vilka platser är delar av en golfbana?</legend>
-                        <label for="green">Green</label>
-                        <label for="teknikums-parkering">Teknikums parkering</label>
-                        <label for="bunker">Bunker</label>
-                        <label for="ica-norrhult">Ica i Norrhult</label>
-                        <input type="checkbox" value="green" name="fråga3" id="green"> <!--Här används checkbox istället för att man ska kunna välja många svar-->
-                        <input type="checkbox" value="teknikums-parkering" name="fråga3" id="teknikums-parkering">
-                        <input type="checkbox" value="bunker" name="fråga3" id="bunker">
-                        <input type="checkbox" value="ica-norrhult" name="fråga3" id="ica-norrhult">
-                    </fieldset>
-                    <br>
-                    <fieldset>
-                        <legend>Vilka av dessa termer är golfslag?</legend>
-                        <label for="blåmes">Blåmes</label>
-                        <label for="eagle">Eagle</label>
-                        <label for="albatros">Albatros</label>
-                        <label for="boogey">Boogey</label>
-                        <input type="checkbox" value="blåmes" name="fråga4" id="blåmes">
-                        <input type="checkbox" value="eagle" name="fråga4" id="eagle">
-                        <input type="checkbox" value="albatros" name="fråga4" id="albatros">
-                        <input type="checkbox" value="boogey" name="fråga4" id="boogey">
-                    </fieldset>
-                    <br>
-                    <label for="fråga5">Vilken klubba slår man (oftast) längst med?</label>
-                    <br>
-                    <input type="text" id="fråga5" name="fråga5"> <!--type text skapar en mindre ruta där man själv kan svara-->
-                    <br> <br>
-                    <label for="fråga6">Vilken av dessa spelare kom tvåa i Masters 2024?</label>
-                    <br>
-                    <select id="fråga6" name="fråga6"> <!--Skapar en rullgardinsmeny där man kan välja svar-->
-                        <option value="woods">Tiger Woods</option> <!--Skapar valen i din rullgardins meny-->
-                        <option value="åberg" selected>Ludvig Åberg</option>
-                        <option value="fleetwood">Toomy Fleetwood</option>
-                        <option value="tosti">Alejandro Tosti</option>
-                    </select>
-                    <br> <br>
-                    <label for="recention">Vad tyckte du om quizen?</label>
-                    <br>
-                    <textarea id="recention" name="recention"></textarea> <!--Skapar en stor yta som man själv kan göra större om man vill skriva mer-->
-                    <fieldset class="spalt5">
-                        <legend>Vad tyckte du om denna quiz?</legend>
-                        <label for="rating5">5</label>
-                        <label for="rating4">4</label>
-                        <label for="rating3">3</label>
-                        <label for="rating2">2</label>
-                        <label for="rating1">1</label>
-                        <input type="radio" value="5" name="rating" id="rating5" checked> <!--Checked gör att detta var är itryckt redan när sidan laddar-->
-                        <input type="radio" value="4" name="rating" id="rating4">
-                        <input type="radio" value="3" name="rating" id="rating3">
-                        <input type="radio" value="2" name="rating" id="rating2">
-                        <input type="radio" value="1" name="rating" id="rating1">
-                    </fieldset>
-                </fieldset>
-                <fieldset>
-                    <legend>Registrering</legend>
-                    <label for="password">Skriv in ditt golf-id</label>
-                    <br>
-                    <input type="password" name="password" id="password" required>  <!--Password gör att man inte kan se texten. Required gör att man måste svara på den för att lämna in-->
-                    <br> <br>
-                    <label for="email">Skriv in din email</label>
-                    <br>
-                    <input type="email" name="email" id="email" placeholder="joesmith@mail.com" required>  <!--email gör att man måste använda @ och något innan och efter det. placeholder gör att man kan se ett exempel på vad man kan skriva-->
-                    <br> <br>
-                    <label for="number">Skriv in ditt telefonnummer</label>
-                    <br>
-                    <input type="tel" name="number" id="number" pattern="[0-9]{3}-[0-9]{7}" placeholder="123-4567890" required> <!--pattern gör att man måste följa mönstret för att lämna in-->
-                    <br> <br>
-                    <button type="submit">Svara</button>  <!--Skapar en knapp som man kan klicka på för att lämna in-->
-                </fieldset>
-            </form>
-        </main>
-        <footer>
-            <p>Emil Sjöstrand <br> te22a</p>
-        </footer>
+                </form>
+            </main>
+            <footer>
+                <p>Emil Sjöstrand <br> te22a</p>
+            </footer>
         </div>
     </body>
 </html>
