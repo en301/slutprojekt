@@ -9,7 +9,7 @@ p, a, h1, h2, label, legend, th, td, caption, figcaption, dt, dd, li{ /*Här vä
 
 body{ /*En typselektor som förändrar body*/
     background-color: whitesmoke; /*Lägger till bakgrundsfärg*/
-    height: 100%; /*Bestämmer höjd på sidan för en telefon*/
+    height: 100vh; /*Bestämmer höjd på sidan för en telefon*/
     margin: 0; /*Gör att sidan går till kanterna*/
     padding: 0; /*Gör att sidan går till kanterna*/
 }
